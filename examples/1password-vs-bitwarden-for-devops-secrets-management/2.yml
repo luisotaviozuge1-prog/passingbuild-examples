@@ -1,0 +1,13 @@
+name: Deploy
+'on': push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v7
+    - name: Run deploy with secrets injected
+      env:
+        BWS_ACCESS_TOKEN: ${{ secrets.BWS_ACCESS_TOKEN }}
+      run: bws run -- './deploy.sh'

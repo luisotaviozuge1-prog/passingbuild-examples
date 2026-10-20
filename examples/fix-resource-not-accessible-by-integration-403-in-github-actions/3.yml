@@ -1,0 +1,18 @@
+name: Permissions demo
+permissions: {}
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "This job has no token permissions"
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v7
+    - run: echo "Read-only access to repository contents"

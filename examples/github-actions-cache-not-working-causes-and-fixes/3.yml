@@ -1,0 +1,18 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/cache/restore@v6
+      id: cache
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    - run: npm ci
+    - run: npm test
+    - uses: actions/cache/save@v6
+      if: always() && steps.cache.outputs.cache-hit != 'true'
+      with:
+        path: ~/.npm
+        key: ${{ steps.cache.outputs.cache-primary-key }}

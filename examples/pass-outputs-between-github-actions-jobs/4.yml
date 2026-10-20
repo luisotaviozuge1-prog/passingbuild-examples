@@ -1,0 +1,27 @@
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      multiline: ${{ steps.set-output.outputs.multiline }}
+    steps:
+    - id: set-output
+      run: |
+        {
+          echo 'multiline<<EOF_7f3a91'
+          echo 'Line 1: Hello'
+          echo 'Line 2: World'
+          echo 'Line 3: 42'
+          echo 'EOF_7f3a91'
+        } >> "$GITHUB_OUTPUT"
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+    - name: Read multiline output
+      env:
+        MULTILINE: ${{ needs.job1.outputs.multiline }}
+      run: |
+        while IFS= read -r line; do
+          echo "Parsed line: $line"
+        done <<< "$MULTILINE"
+'on': push

@@ -1,0 +1,21 @@
+name: 'pass-outputs-between-github-actions-jobs #3: consume-outputs'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-pass-outputs-between-github-actions-jobs-3.yml
+jobs:
+  producer:
+    runs-on: ubuntu-latest
+    outputs:
+      build_id: ${{ steps.set_output.outputs.id }}
+    steps:
+    - id: set_output
+      run: echo "id=123456" >> "$GITHUB_OUTPUT"
+  consumer:
+    runs-on: ubuntu-latest
+    needs: producer
+    steps:
+    - env:
+        BUILD_ID: ${{ needs.producer.outputs.build_id }}
+      run: 'echo "Received build ID: $BUILD_ID"'

@@ -1,0 +1,17 @@
+name: 'pass-outputs-between-github-actions-jobs #2'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-pass-outputs-between-github-actions-jobs-2.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set result
+      id: result-step
+      run: echo "result=success" >> "$GITHUB_OUTPUT"
+    - name: Use result
+      run: echo "Result was $RESULT"
+      env:
+        RESULT: ${{ steps.result-step.outputs.result }}

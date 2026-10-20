@@ -1,0 +1,6 @@
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+'on': push

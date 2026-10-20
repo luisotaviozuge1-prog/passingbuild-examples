@@ -1,0 +1,227 @@
+{
+  "1password-vs-bitwarden-for-devops-secrets-management": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/1password-vs-bitwarden-for-devops-secrets-management/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: OP_SERVICE_ACCOUNT_TOKEN",
+        "usa ação de terceiros (1password/load-secrets-action)",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/1password-vs-bitwarden-for-devops-secrets-management/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: BWS_ACCESS_TOKEN"
+      ]
+    }
+  ],
+  "best-vps-for-github-actions-self-hosted-runners": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/best-vps-for-github-actions-self-hosted-runners/1.yml",
+      "executavel": false,
+      "motivos": [
+        "job build precisa de runner próprio (['self-hosted', 'linux', 'vps'])",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    }
+  ],
+  "digitalocean-vs-vultr-for-ci-cd-pipelines": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/digitalocean-vs-vultr-for-ci-cd-pipelines/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DIGITALOCEAN_ACCESS_TOKEN",
+        "usa ação de terceiros (digitalocean/action-doctl)"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/digitalocean-vs-vultr-for-ci-cd-pipelines/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: VULTR_API_KEY"
+      ]
+    }
+  ],
+  "fix-resource-not-accessible-by-integration-403-in-github-actions": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/1.yml",
+      "executavel": false,
+      "motivos": [
+        "job comment é um trecho (sem steps)",
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/2.yml",
+      "executavel": false,
+      "motivos": [
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-resource-not-accessible-by-integration-403-in-github-actions-3.yml"
+    }
+  ],
+  "github-actions-cache-not-working-causes-and-fixes": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/github-actions-cache-not-working-causes-and-fixes/1.yml",
+      "executavel": false,
+      "motivos": [
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/github-actions-cache-not-working-causes-and-fixes/3.yml",
+      "executavel": false,
+      "motivos": [
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    }
+  ],
+  "github-actions-docker-build-and-push-with-layer-caching": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/github-actions-docker-build-and-push-with-layer-caching/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DOCKERHUB_TOKEN",
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)",
+        "usa ação de terceiros (docker/setup-buildx-action)",
+        "usa ação de terceiros (docker/login-action)",
+        "usa ação de terceiros (docker/metadata-action)",
+        "usa ação de terceiros (docker/build-push-action)"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/github-actions-docker-build-and-push-with-layer-caching/2.yml",
+      "executavel": false,
+      "motivos": [
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)",
+        "usa ação de terceiros (docker/setup-qemu-action)",
+        "usa ação de terceiros (docker/setup-buildx-action)",
+        "usa ação de terceiros (docker/login-action)",
+        "usa ação de terceiros (docker/metadata-action)",
+        "usa ação de terceiros (docker/build-push-action)"
+      ]
+    }
+  ],
+  "github-actions-scheduled-workflow-not-triggering-causes-and-fixes": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/github-actions-scheduled-workflow-not-triggering-causes-and-fixes/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-github-actions-scheduled-workflow-not-triggering-causes-and-fixes-1.yml"
+    }
+  ],
+  "how-to-choose-a-hosting-provider-for-github-actions-deploys": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/how-to-choose-a-hosting-provider-for-github-actions-deploys/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: FLY_API_TOKEN",
+        "job deploy usa environment de deploy",
+        "usa ação de terceiros (superfly/flyctl-actions/setup-flyctl)"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/how-to-choose-a-hosting-provider-for-github-actions-deploys/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: VPS_HOST, VPS_SSH_KEY, VPS_USER",
+        "job deploy usa environment de deploy",
+        "usa ação de terceiros (appleboy/ssh-action)"
+      ]
+    }
+  ],
+  "pass-outputs-between-github-actions-jobs": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-1.yml"
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/2.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-2.yml"
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-3.yml"
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/4.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-4.yml"
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/5.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-5.yml"
+    },
+    {
+      "bloco": 6,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/6.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-6.yml"
+    }
+  ],
+  "run-github-actions-jobs-only-when-specific-files-change": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/run-github-actions-jobs-only-when-specific-files-change/1.yml",
+      "executavel": false,
+      "motivos": [
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/run-github-actions-jobs-only-when-specific-files-change/3.yml",
+      "executavel": false,
+      "motivos": [
+        "usa ação de terceiros (dorny/paths-filter)",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/run-github-actions-jobs-only-when-specific-files-change/4.yml",
+      "executavel": false,
+      "motivos": [
+        "usa ação de terceiros (dorny/paths-filter)",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    }
+  ]
+}

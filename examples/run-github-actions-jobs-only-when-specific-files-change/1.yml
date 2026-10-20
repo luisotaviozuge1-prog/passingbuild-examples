@@ -1,0 +1,12 @@
+name: Frontend CI
+'on':
+  pull_request:
+    paths:
+    - src/frontend/**
+    - package.json
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - run: npm ci && npm test

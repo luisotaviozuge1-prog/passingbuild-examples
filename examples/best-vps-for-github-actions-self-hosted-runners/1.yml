@@ -1,0 +1,10 @@
+jobs:
+  build:
+    runs-on:
+    - self-hosted
+    - linux
+    - vps
+    steps:
+    - uses: actions/checkout@v7
+    - run: make test
+'on': push

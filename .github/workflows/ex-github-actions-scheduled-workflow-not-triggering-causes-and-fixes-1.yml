@@ -1,0 +1,11 @@
+name: 'github-actions-scheduled-workflow-not-triggering-causes-and-fixes #1: Scheduled Check'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-github-actions-scheduled-workflow-not-triggering-causes-and-fixes-1.yml
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Scheduled run"

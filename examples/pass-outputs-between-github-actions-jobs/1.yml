@@ -1,0 +1,15 @@
+name: pass-outputs
+'on': push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.set_version.outputs.version }}
+    steps:
+    - id: set_version
+      run: echo "version=1.0" >> "$GITHUB_OUTPUT"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - run: echo "Build version is ${{ needs.build.outputs.version }}"

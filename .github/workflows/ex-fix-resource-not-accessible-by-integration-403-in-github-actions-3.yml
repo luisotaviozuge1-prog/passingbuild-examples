@@ -1,0 +1,19 @@
+name: 'fix-resource-not-accessible-by-integration-403-in-github-actions #3: Permissions demo'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-resource-not-accessible-by-integration-403-in-github-actions-3.yml
+permissions: {}
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "This job has no token permissions"
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v7
+    - run: echo "Read-only access to repository contents"
