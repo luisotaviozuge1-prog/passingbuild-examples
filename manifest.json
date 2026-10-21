@@ -52,11 +52,11 @@
   "fix-resource-not-accessible-by-integration-403-in-github-actions": [
     {
       "bloco": 1,
-      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/1.yml",
+      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/1.snippet.yaml",
+      "trecho": true,
       "executavel": false,
       "motivos": [
-        "job comment é um trecho (sem steps)",
-        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
+        "trecho do artigo: job comment sem steps"
       ]
     },
     {
@@ -190,10 +190,12 @@
     },
     {
       "bloco": 6,
-      "arquivo": "examples/pass-outputs-between-github-actions-jobs/6.yml",
-      "executavel": true,
-      "motivos": [],
-      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-6.yml"
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/6.snippet.yaml",
+      "trecho": true,
+      "executavel": false,
+      "motivos": [
+        "trecho do artigo: usa needs.job1 de fora do trecho"
+      ]
     }
   ],
   "run-github-actions-jobs-only-when-specific-files-change": [
