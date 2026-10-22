@@ -1,0 +1,6 @@
+jobs:
+  test:
+    uses: org/repo/.github/workflows/lint-test.yml@v1
+    with:
+      node-version: '20'
+'on': push

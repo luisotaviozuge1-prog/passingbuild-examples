@@ -1,0 +1,10 @@
+name: CI
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  call-lint-and-test:
+    uses: ./.github/workflows/lint-test-reusable.yml
+    with:
+      node-version: '20'

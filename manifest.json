@@ -52,11 +52,11 @@
   "fix-resource-not-accessible-by-integration-403-in-github-actions": [
     {
       "bloco": 1,
-      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/1.snippet.yaml",
-      "trecho": true,
+      "arquivo": "examples/fix-resource-not-accessible-by-integration-403-in-github-actions/1.yml",
       "executavel": false,
       "motivos": [
-        "trecho do artigo: job comment sem steps"
+        "job comment é um trecho (sem steps)",
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
       ]
     },
     {
@@ -190,11 +190,60 @@
     },
     {
       "bloco": 6,
-      "arquivo": "examples/pass-outputs-between-github-actions-jobs/6.snippet.yaml",
-      "trecho": true,
+      "arquivo": "examples/pass-outputs-between-github-actions-jobs/6.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-6.yml"
+    }
+  ],
+  "reusable-workflows-vs-composite-actions-in-github-actions": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/1.yml",
       "executavel": false,
       "motivos": [
-        "trecho do artigo: usa needs.job1 de fora do trecho"
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/2.yml",
+      "executavel": false,
+      "motivos": [
+        "job call-lint-and-test chama workflow reutilizável"
+      ]
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/4.yml",
+      "executavel": false,
+      "motivos": [
+        "usa ação de terceiros (./.github/actions/lint-test)"
+      ]
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/5.yml",
+      "executavel": false,
+      "motivos": [
+        "usa ação de terceiros (org/repo/.github/workflows/lint-test.yml)"
+      ]
+    },
+    {
+      "bloco": 6,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/6.yml",
+      "executavel": false,
+      "motivos": [
+        "job test chama workflow reutilizável"
+      ]
+    },
+    {
+      "bloco": 7,
+      "arquivo": "examples/reusable-workflows-vs-composite-actions-in-github-actions/7.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: REGISTRY_TOKEN",
+        "usa ação de terceiros (./.github/actions/lint-test)"
       ]
     }
   ],

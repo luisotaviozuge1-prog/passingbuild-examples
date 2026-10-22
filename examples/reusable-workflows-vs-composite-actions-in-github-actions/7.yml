@@ -1,0 +1,10 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./.github/actions/lint-test
+      with:
+        node-version: '20'
+        registry-token: ${{ secrets.REGISTRY_TOKEN }}
