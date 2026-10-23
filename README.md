@@ -13,5 +13,6 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [github-actions-scheduled-workflow-not-triggering-causes-and-fixes](https://passingbuild.com/blog/github-actions-scheduled-workflow-not-triggering-causes-and-fixes/) | 1 | 1 |
 | [how-to-choose-a-hosting-provider-for-github-actions-deploys](https://passingbuild.com/blog/how-to-choose-a-hosting-provider-for-github-actions-deploys/) | 2 | 0 |
 | [pass-outputs-between-github-actions-jobs](https://passingbuild.com/blog/pass-outputs-between-github-actions-jobs/) | 6 | 6 |
+| [railway-vs-digitalocean-for-web-app-deployment](https://passingbuild.com/blog/railway-vs-digitalocean-for-web-app-deployment/) | 2 | 0 |
 | [reusable-workflows-vs-composite-actions-in-github-actions](https://passingbuild.com/blog/reusable-workflows-vs-composite-actions-in-github-actions/) | 6 | 0 |
 | [run-github-actions-jobs-only-when-specific-files-change](https://passingbuild.com/blog/run-github-actions-jobs-only-when-specific-files-change/) | 3 | 0 |

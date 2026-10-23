@@ -1,0 +1,17 @@
+name: Deploy to Railway
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-node@v7
+      with:
+        node-version: '20'
+    - run: npm install -g @railway/cli
+    - run: railway up --ci --service my-service
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}

@@ -196,6 +196,26 @@
       "workflow": ".github/workflows/ex-pass-outputs-between-github-actions-jobs-6.yml"
     }
   ],
+  "railway-vs-digitalocean-for-web-app-deployment": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/railway-vs-digitalocean-for-web-app-deployment/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: RAILWAY_TOKEN",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/railway-vs-digitalocean-for-web-app-deployment/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DIGITALOCEAN_ACCESS_TOKEN, DO_APP_ID",
+        "usa ação de terceiros (digitalocean/action-doctl)"
+      ]
+    }
+  ],
   "reusable-workflows-vs-composite-actions-in-github-actions": [
     {
       "bloco": 1,
