@@ -11,6 +11,7 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [github-actions-cache-not-working-causes-and-fixes](https://passingbuild.com/blog/github-actions-cache-not-working-causes-and-fixes/) | 2 | 0 | 0 |
 | [github-actions-docker-build-and-push-with-layer-caching](https://passingbuild.com/blog/github-actions-docker-build-and-push-with-layer-caching/) | 2 | 0 | 0 |
 | [github-actions-scheduled-workflow-not-triggering-causes-and-fixes](https://passingbuild.com/blog/github-actions-scheduled-workflow-not-triggering-causes-and-fixes/) | 1 | 1 | 0 |
+| [github-actions-secret-not-passed-to-script-causes-and-fixes](https://passingbuild.com/blog/github-actions-secret-not-passed-to-script-causes-and-fixes/) | 7 | 1 | 0 |
 | [how-to-choose-a-hosting-provider-for-github-actions-deploys](https://passingbuild.com/blog/how-to-choose-a-hosting-provider-for-github-actions-deploys/) | 2 | 0 | 0 |
 | [pass-outputs-between-github-actions-jobs](https://passingbuild.com/blog/pass-outputs-between-github-actions-jobs/) | 5 | 5 | 1 |
 | [railway-vs-digitalocean-for-web-app-deployment](https://passingbuild.com/blog/railway-vs-digitalocean-for-web-app-deployment/) | 2 | 0 | 0 |

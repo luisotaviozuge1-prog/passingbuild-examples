@@ -1,0 +1,11 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run PowerShell script
+      shell: pwsh
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+      run: ./scripts/Deploy.ps1

@@ -1,0 +1,17 @@
+name: Fork PR Check
+'on':
+  pull_request_target:
+    branches:
+    - main
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Check out base repository
+      uses: actions/checkout@v7
+    - name: Run script from the base branch
+      env:
+        DEPLOY_API_KEY: ${{ secrets.DEPLOY_API_KEY }}
+      run: ./scripts/verify-internal.sh

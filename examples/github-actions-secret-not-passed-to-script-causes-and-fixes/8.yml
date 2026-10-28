@@ -1,0 +1,12 @@
+name: Mask Demo
+'on': push
+jobs:
+  mask-demo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Register mask and print value
+      env:
+        SESSION_VALUE: example-session-value
+      run: |
+        echo "::add-mask::$SESSION_VALUE"
+        echo "Value is: $SESSION_VALUE"

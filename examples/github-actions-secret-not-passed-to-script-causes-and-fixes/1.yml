@@ -1,0 +1,15 @@
+name: Build and Deploy
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v7
+    - name: Run script with secret
+      env:
+        API_TOKEN: ${{ secrets.API_TOKEN }}
+      run: ./scripts/deploy.sh

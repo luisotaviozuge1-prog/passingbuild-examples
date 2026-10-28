@@ -1,0 +1,6 @@
+jobs:
+  call:
+    uses: ./.github/workflows/deploy.yml
+    secrets:
+      API_TOKEN: ${{ secrets.API_TOKEN }}
+'on': push

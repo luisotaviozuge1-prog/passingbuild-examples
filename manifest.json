@@ -130,6 +130,69 @@
       "workflow": ".github/workflows/ex-github-actions-scheduled-workflow-not-triggering-causes-and-fixes-1.yml"
     }
   ],
+  "github-actions-secret-not-passed-to-script-causes-and-fixes": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/1.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: API_TOKEN",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: API_TOKEN",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/3.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DEPLOY_API_KEY",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/4.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DEPLOY_API_KEY",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/5.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: DEPLOY_API_KEY",
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 6,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/6.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: API_TOKEN",
+        "job call chama workflow reutilizável"
+      ]
+    },
+    {
+      "bloco": 8,
+      "arquivo": "examples/github-actions-secret-not-passed-to-script-causes-and-fixes/8.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-github-actions-secret-not-passed-to-script-causes-and-fixes-8.yml"
+    }
+  ],
   "how-to-choose-a-hosting-provider-for-github-actions-deploys": [
     {
       "bloco": 1,

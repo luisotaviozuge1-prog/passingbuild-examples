@@ -1,0 +1,15 @@
+name: Dependabot Build
+'on':
+  pull_request: null
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v7
+    - name: Run script with Dependabot secret
+      env:
+        DEPLOY_API_KEY: ${{ secrets.DEPLOY_API_KEY }}
+      run: ./scripts/build.sh
