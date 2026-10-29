@@ -215,6 +215,32 @@
       ]
     }
   ],
+  "how-to-reduce-github-actions-minutes-usage": [
+    {
+      "bloco": 5,
+      "arquivo": "examples/how-to-reduce-github-actions-minutes-usage/5.snippet.yaml",
+      "trecho": true,
+      "executavel": false,
+      "motivos": [
+        "trecho do artigo: job test sem steps"
+      ]
+    },
+    {
+      "bloco": 6,
+      "arquivo": "examples/how-to-reduce-github-actions-minutes-usage/6.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-how-to-reduce-github-actions-minutes-usage-6.yml"
+    },
+    {
+      "bloco": 7,
+      "arquivo": "examples/how-to-reduce-github-actions-minutes-usage/7.yml",
+      "executavel": false,
+      "motivos": [
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    }
+  ],
   "pass-outputs-between-github-actions-jobs": [
     {
       "bloco": 1,
