@@ -1,0 +1,15 @@
+name: 'fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui #1: Manual workflow'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui-1.yml
+jobs:
+  show-inputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Version: ${{ inputs.version }}"
+        echo "Feature enabled: ${{ inputs.enable_feature }}"
+        echo "Priority: ${{ inputs.priority }}"
+        echo "Environment: ${{ inputs.environment }}"

@@ -1,0 +1,35 @@
+name: Manual workflow
+'on':
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version
+        required: true
+        type: string
+      enable_feature:
+        description: Enable new feature
+        required: false
+        type: boolean
+        default: false
+      priority:
+        description: Job priority
+        required: true
+        type: number
+        default: 5
+      environment:
+        description: Deployment target
+        required: true
+        type: choice
+        options:
+        - dev
+        - staging
+        - prod
+jobs:
+  show-inputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Version: ${{ inputs.version }}"
+        echo "Feature enabled: ${{ inputs.enable_feature }}"
+        echo "Priority: ${{ inputs.priority }}"
+        echo "Environment: ${{ inputs.environment }}"

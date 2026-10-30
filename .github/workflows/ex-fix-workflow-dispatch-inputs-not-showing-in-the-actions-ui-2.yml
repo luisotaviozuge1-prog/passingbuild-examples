@@ -1,0 +1,13 @@
+name: 'fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui #2'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui-2.yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.deploy }}
+    steps:
+    - name: Echo version
+      run: echo "Building version ${{ inputs.version }}"

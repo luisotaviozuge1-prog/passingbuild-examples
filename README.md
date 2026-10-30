@@ -8,6 +8,7 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [best-vps-for-github-actions-self-hosted-runners](https://passingbuild.com/blog/best-vps-for-github-actions-self-hosted-runners/) | 1 | 0 | 0 |
 | [digitalocean-vs-vultr-for-ci-cd-pipelines](https://passingbuild.com/blog/digitalocean-vs-vultr-for-ci-cd-pipelines/) | 2 | 0 | 0 |
 | [fix-resource-not-accessible-by-integration-403-in-github-actions](https://passingbuild.com/blog/fix-resource-not-accessible-by-integration-403-in-github-actions/) | 2 | 1 | 1 |
+| [fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui](https://passingbuild.com/blog/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/) | 2 | 2 | 0 |
 | [github-actions-cache-not-working-causes-and-fixes](https://passingbuild.com/blog/github-actions-cache-not-working-causes-and-fixes/) | 2 | 0 | 0 |
 | [github-actions-docker-build-and-push-with-layer-caching](https://passingbuild.com/blog/github-actions-docker-build-and-push-with-layer-caching/) | 2 | 0 | 0 |
 | [github-actions-scheduled-workflow-not-triggering-causes-and-fixes](https://passingbuild.com/blog/github-actions-scheduled-workflow-not-triggering-causes-and-fixes/) | 1 | 1 | 0 |

@@ -75,6 +75,22 @@
       "workflow": ".github/workflows/ex-fix-resource-not-accessible-by-integration-403-in-github-actions-3.yml"
     }
   ],
+  "fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui-1.yml"
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/2.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui-2.yml"
+    }
+  ],
   "github-actions-cache-not-working-causes-and-fixes": [
     {
       "bloco": 1,

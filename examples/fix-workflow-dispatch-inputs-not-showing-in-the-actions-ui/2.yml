@@ -1,0 +1,22 @@
+'on':
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy to production
+        required: true
+        type: boolean
+      version:
+        description: Application version
+        required: true
+        type: choice
+        options:
+        - '1.0'
+        - '1.1'
+        - '2.0'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.deploy }}
+    steps:
+    - name: Echo version
+      run: echo "Building version ${{ inputs.version }}"
