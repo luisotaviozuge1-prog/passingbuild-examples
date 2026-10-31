@@ -6,6 +6,7 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 |---|---|---|---|
 | [1password-vs-bitwarden-for-devops-secrets-management](https://passingbuild.com/blog/1password-vs-bitwarden-for-devops-secrets-management/) | 2 | 0 | 0 |
 | [best-vps-for-github-actions-self-hosted-runners](https://passingbuild.com/blog/best-vps-for-github-actions-self-hosted-runners/) | 1 | 0 | 0 |
+| [deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation](https://passingbuild.com/blog/deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation/) | 1 | 0 | 0 |
 | [digitalocean-vs-vultr-for-ci-cd-pipelines](https://passingbuild.com/blog/digitalocean-vs-vultr-for-ci-cd-pipelines/) | 2 | 0 | 0 |
 | [fix-resource-not-accessible-by-integration-403-in-github-actions](https://passingbuild.com/blog/fix-resource-not-accessible-by-integration-403-in-github-actions/) | 2 | 1 | 1 |
 | [fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui](https://passingbuild.com/blog/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/) | 2 | 2 | 0 |

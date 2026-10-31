@@ -30,6 +30,18 @@
       ]
     }
   ],
+  "deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation/1.yml",
+      "executavel": false,
+      "motivos": [
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)",
+        "usa ação de terceiros (google-github-actions/auth)",
+        "usa ação de terceiros (google-github-actions/deploy-cloudrun)"
+      ]
+    }
+  ],
   "digitalocean-vs-vultr-for-ci-cd-pipelines": [
     {
       "bloco": 1,
