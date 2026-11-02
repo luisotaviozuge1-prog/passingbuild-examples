@@ -1,0 +1,31 @@
+name: Build with Kaniko
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on:
+    - self-hosted
+    - linux
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: actions/checkout@v7
+    - name: Write registry credentials
+      env:
+        REGISTRY_USER: ${{ github.actor }}
+        REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        mkdir -p "$RUNNER_TEMP/docker"
+        AUTH=$(printf '%s:%s' "$REGISTRY_USER" "$REGISTRY_TOKEN" | base64 -w0)
+        printf '{"auths":{"ghcr.io":{"auth":"%s"}}}' "$AUTH" > "$RUNNER_TEMP/docker/config.json"
+    - name: Build and push
+      env:
+        DOCKER_CONFIG: ${{ runner.temp }}/docker
+      run: |
+        /kaniko/executor \
+          --context="dir://${GITHUB_WORKSPACE}" \
+          --dockerfile="${GITHUB_WORKSPACE}/Dockerfile" \
+          --destination="ghcr.io/${GITHUB_REPOSITORY}:latest"

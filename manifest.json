@@ -30,6 +30,29 @@
       ]
     }
   ],
+  "build-docker-images-on-kubernetes-runners-without-privileged-mode": [
+    {
+      "bloco": 2,
+      "arquivo": "examples/build-docker-images-on-kubernetes-runners-without-privileged-mode/2.yml",
+      "executavel": false,
+      "motivos": [
+        "job build precisa de runner próprio (['self-hosted', 'linux'])",
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)",
+        "usa ação de terceiros (docker/login-action)",
+        "usa ação de terceiros (docker/setup-buildx-action)",
+        "usa ação de terceiros (docker/build-push-action)"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/build-docker-images-on-kubernetes-runners-without-privileged-mode/3.yml",
+      "executavel": false,
+      "motivos": [
+        "job build precisa de runner próprio (['self-hosted', 'linux'])",
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
+      ]
+    }
+  ],
   "deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation": [
     {
       "bloco": 1,
