@@ -9,6 +9,7 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [build-docker-images-on-kubernetes-runners-without-privileged-mode](https://passingbuild.com/blog/build-docker-images-on-kubernetes-runners-without-privileged-mode/) | 2 | 0 | 0 |
 | [deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation](https://passingbuild.com/blog/deploy-to-google-cloud-run-from-github-actions-with-workload-identity-federation/) | 1 | 0 | 0 |
 | [digitalocean-vs-vultr-for-ci-cd-pipelines](https://passingbuild.com/blog/digitalocean-vs-vultr-for-ci-cd-pipelines/) | 2 | 0 | 0 |
+| [fix-no-usable-sandbox-in-puppeteer-on-github-actions](https://passingbuild.com/blog/fix-no-usable-sandbox-in-puppeteer-on-github-actions/) | 3 | 2 | 0 |
 | [fix-resource-not-accessible-by-integration-403-in-github-actions](https://passingbuild.com/blog/fix-resource-not-accessible-by-integration-403-in-github-actions/) | 2 | 1 | 1 |
 | [fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui](https://passingbuild.com/blog/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/) | 2 | 2 | 0 |
 | [github-actions-cache-not-working-causes-and-fixes](https://passingbuild.com/blog/github-actions-cache-not-working-causes-and-fixes/) | 2 | 0 | 0 |

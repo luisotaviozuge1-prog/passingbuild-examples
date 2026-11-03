@@ -1,0 +1,12 @@
+name: 'fix-no-usable-sandbox-in-puppeteer-on-github-actions #2'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-no-usable-sandbox-in-puppeteer-on-github-actions-2.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check sysctl
+      run: sysctl kernel.apparmor_restrict_unprivileged_userns

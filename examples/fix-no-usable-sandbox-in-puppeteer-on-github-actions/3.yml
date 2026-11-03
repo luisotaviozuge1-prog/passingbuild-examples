@@ -1,0 +1,17 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Allow userns for Puppeteer Chrome
+      run: |
+        sudo tee /etc/apparmor.d/puppeteer-chrome > /dev/null <<'EOF'
+        abi <abi/4.0>,
+        include <tunables/global>
+
+        profile puppeteer-chrome /home/runner/.cache/puppeteer/chrome/**/chrome flags=(unconfined) {
+          userns,
+        }
+        EOF
+        sudo apparmor_parser -r /etc/apparmor.d/puppeteer-chrome

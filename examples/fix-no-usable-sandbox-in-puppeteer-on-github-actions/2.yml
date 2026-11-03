@@ -1,0 +1,8 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check sysctl
+      run: sysctl kernel.apparmor_restrict_unprivileged_userns

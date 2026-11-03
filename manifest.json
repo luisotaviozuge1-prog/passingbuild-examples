@@ -84,6 +84,30 @@
       ]
     }
   ],
+  "fix-no-usable-sandbox-in-puppeteer-on-github-actions": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/fix-no-usable-sandbox-in-puppeteer-on-github-actions/1.yml",
+      "executavel": false,
+      "motivos": [
+        "run depende de arquivos/ferramentas do projeto do leitor"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/fix-no-usable-sandbox-in-puppeteer-on-github-actions/2.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-no-usable-sandbox-in-puppeteer-on-github-actions-2.yml"
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/fix-no-usable-sandbox-in-puppeteer-on-github-actions/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-no-usable-sandbox-in-puppeteer-on-github-actions-3.yml"
+    }
+  ],
   "fix-resource-not-accessible-by-integration-403-in-github-actions": [
     {
       "bloco": 1,
