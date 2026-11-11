@@ -1,0 +1,12 @@
+name: 'fix-xcode-exit-code-65-in-github-actions-ios-builds #3'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-3.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Select Xcode manually
+      run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer

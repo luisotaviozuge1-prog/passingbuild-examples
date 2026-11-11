@@ -1,0 +1,19 @@
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: true
+      matrix:
+        version:
+        - 6
+        - 7
+        - 8
+        experimental:
+        - false
+        include:
+        - version: 9
+          experimental: true
+    steps:
+    - run: echo "Testing version ${{ matrix.version }}"
+'on': push

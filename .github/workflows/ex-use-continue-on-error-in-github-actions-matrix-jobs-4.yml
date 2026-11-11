@@ -1,0 +1,13 @@
+name: 'use-continue-on-error-in-github-actions-matrix-jobs #4: Step-level continue-on-error'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-4.yml
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: exit 1
+      continue-on-error: true
+    - run: echo "Runs because the previous step was allowed to fail"

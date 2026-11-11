@@ -1,0 +1,10 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: List simulators
+      run: |
+        xcrun simctl list runtimes
+        xcrun simctl list devices available

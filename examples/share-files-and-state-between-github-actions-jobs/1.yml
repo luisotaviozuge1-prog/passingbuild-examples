@@ -1,0 +1,36 @@
+name: build-and-test
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node:
+        - 18
+        - 20
+    steps:
+    - uses: actions/checkout@v7
+    - name: Build application
+      run: |
+        mkdir -p dist
+        echo "Build output for Node ${{ matrix.node }}" > dist/app.txt
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v7
+      with:
+        name: app-dist-node-${{ matrix.node }}
+        path: dist/
+        retention-days: 5
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download Node 20 artifact
+      uses: actions/download-artifact@v8
+      with:
+        name: app-dist-node-20
+        path: dist-node-20
+    - name: Verify downloaded content
+      run: ls -la dist-node-20

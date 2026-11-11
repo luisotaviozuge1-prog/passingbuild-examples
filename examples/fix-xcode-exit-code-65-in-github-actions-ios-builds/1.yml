@@ -1,0 +1,29 @@
+name: Build iOS App
+'on':
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+    - name: Build iOS App
+      run: |
+        set -o pipefail
+        xcodebuild \
+          -workspace MyApp.xcworkspace \
+          -scheme MyApp \
+          -configuration Debug \
+          -destination 'generic/platform=iOS' \
+          clean build | tee xcodebuild.log
+    - name: Show build errors
+      if: failure()
+      run: grep -E 'error:|BUILD FAILED' xcodebuild.log || true
+    - name: Upload raw log
+      if: failure()
+      uses: actions/upload-artifact@v7
+      with:
+        name: xcodebuild-raw-log
+        path: xcodebuild.log

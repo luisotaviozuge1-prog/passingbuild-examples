@@ -1,0 +1,13 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run unit tests
+      run: |
+        set -o pipefail
+        xcodebuild test \
+          -project MyApp.xcodeproj \
+          -scheme MyApp \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'

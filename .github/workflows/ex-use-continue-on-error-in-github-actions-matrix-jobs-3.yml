@@ -1,0 +1,12 @@
+name: 'use-continue-on-error-in-github-actions-matrix-jobs #3: Job-level continue-on-error'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-3.yml
+jobs:
+  optional-tests:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+    - run: exit 1

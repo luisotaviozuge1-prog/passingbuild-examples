@@ -12,6 +12,7 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [fix-no-usable-sandbox-in-puppeteer-on-github-actions](https://passingbuild.com/blog/fix-no-usable-sandbox-in-puppeteer-on-github-actions/) | 3 | 2 | 0 |
 | [fix-resource-not-accessible-by-integration-403-in-github-actions](https://passingbuild.com/blog/fix-resource-not-accessible-by-integration-403-in-github-actions/) | 2 | 1 | 1 |
 | [fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui](https://passingbuild.com/blog/fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui/) | 2 | 2 | 0 |
+| [fix-xcode-exit-code-65-in-github-actions-ios-builds](https://passingbuild.com/blog/fix-xcode-exit-code-65-in-github-actions-ios-builds/) | 8 | 6 | 0 |
 | [github-actions-cache-not-working-causes-and-fixes](https://passingbuild.com/blog/github-actions-cache-not-working-causes-and-fixes/) | 2 | 0 | 0 |
 | [github-actions-docker-build-and-push-with-layer-caching](https://passingbuild.com/blog/github-actions-docker-build-and-push-with-layer-caching/) | 2 | 0 | 0 |
 | [github-actions-scheduled-workflow-not-triggering-causes-and-fixes](https://passingbuild.com/blog/github-actions-scheduled-workflow-not-triggering-causes-and-fixes/) | 1 | 1 | 0 |
@@ -22,3 +23,5 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [railway-vs-digitalocean-for-web-app-deployment](https://passingbuild.com/blog/railway-vs-digitalocean-for-web-app-deployment/) | 2 | 0 | 0 |
 | [reusable-workflows-vs-composite-actions-in-github-actions](https://passingbuild.com/blog/reusable-workflows-vs-composite-actions-in-github-actions/) | 6 | 0 | 0 |
 | [run-github-actions-jobs-only-when-specific-files-change](https://passingbuild.com/blog/run-github-actions-jobs-only-when-specific-files-change/) | 3 | 0 | 0 |
+| [share-files-and-state-between-github-actions-jobs](https://passingbuild.com/blog/share-files-and-state-between-github-actions-jobs/) | 5 | 4 | 0 |
+| [use-continue-on-error-in-github-actions-matrix-jobs](https://passingbuild.com/blog/use-continue-on-error-in-github-actions-matrix-jobs/) | 5 | 5 | 0 |

@@ -1,0 +1,17 @@
+name: 'share-files-and-state-between-github-actions-jobs #4'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-share-files-and-state-between-github-actions-jobs-4.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Restore pip cache
+      uses: actions/cache@v6
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-

@@ -1,0 +1,8 @@
+name: Job-level continue-on-error
+'on': push
+jobs:
+  optional-tests:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+    - run: exit 1

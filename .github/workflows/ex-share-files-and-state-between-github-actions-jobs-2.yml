@@ -1,0 +1,36 @@
+name: 'share-files-and-state-between-github-actions-jobs #2: build-and-collect'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-share-files-and-state-between-github-actions-jobs-2.yml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target:
+        - linux
+        - macos
+        - windows
+    steps:
+    - uses: actions/checkout@v7
+    - name: Build binary
+      run: |
+        mkdir -p dist
+        echo "artifact for ${{ matrix.target }}" > dist/binary-${{ matrix.target }}.txt
+    - uses: actions/upload-artifact@v7
+      with:
+        name: build-output-${{ matrix.target }}
+        path: dist/
+  aggregate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/download-artifact@v8
+      with:
+        pattern: build-output-*
+        path: all-builds/
+        merge-multiple: true
+    - name: Verify files
+      run: ls -la all-builds/

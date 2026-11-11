@@ -1,0 +1,17 @@
+name: 'fix-xcode-exit-code-65-in-github-actions-ios-builds #6'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-6.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run unit tests
+      run: |
+        set -o pipefail
+        xcodebuild test \
+          -project MyApp.xcodeproj \
+          -scheme MyApp \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'

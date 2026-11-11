@@ -1,0 +1,14 @@
+name: 'fix-xcode-exit-code-65-in-github-actions-ios-builds #7'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-7.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: List simulators
+      run: |
+        xcrun simctl list runtimes
+        xcrun simctl list devices available

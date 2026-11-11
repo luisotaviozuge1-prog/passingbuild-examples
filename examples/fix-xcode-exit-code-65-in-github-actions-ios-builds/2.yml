@@ -1,0 +1,12 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Select Xcode version
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '15.4'
+    - name: Verify Xcode version
+      run: xcodebuild -version

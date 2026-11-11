@@ -150,6 +150,66 @@
       "workflow": ".github/workflows/ex-fix-workflow-dispatch-inputs-not-showing-in-the-actions-ui-2.yml"
     }
   ],
+  "fix-xcode-exit-code-65-in-github-actions-ios-builds": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-1.yml"
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/2.yml",
+      "executavel": false,
+      "motivos": [
+        "usa ação de terceiros (maxim-lobanov/setup-xcode)"
+      ]
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-3.yml"
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/4.yml",
+      "executavel": false,
+      "motivos": [
+        "usa segredos: BUILD_CERTIFICATE_BASE64, BUILD_PROVISION_PROFILE_BASE64, KEYCHAIN_PASSWORD, P12_PASSWORD"
+      ]
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/5.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-5.yml"
+    },
+    {
+      "bloco": 6,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/6.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-6.yml"
+    },
+    {
+      "bloco": 7,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/7.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-7.yml"
+    },
+    {
+      "bloco": 8,
+      "arquivo": "examples/fix-xcode-exit-code-65-in-github-actions-ios-builds/8.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-8.yml"
+    }
+  ],
   "github-actions-cache-not-working-causes-and-fixes": [
     {
       "bloco": 1,
@@ -459,6 +519,81 @@
         "usa ação de terceiros (dorny/paths-filter)",
         "run depende de arquivos/ferramentas do projeto do leitor"
       ]
+    }
+  ],
+  "share-files-and-state-between-github-actions-jobs": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/share-files-and-state-between-github-actions-jobs/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-share-files-and-state-between-github-actions-jobs-1.yml"
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/share-files-and-state-between-github-actions-jobs/2.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-share-files-and-state-between-github-actions-jobs-2.yml"
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/share-files-and-state-between-github-actions-jobs/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-share-files-and-state-between-github-actions-jobs-3.yml"
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/share-files-and-state-between-github-actions-jobs/4.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-share-files-and-state-between-github-actions-jobs-4.yml"
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/share-files-and-state-between-github-actions-jobs/5.yml",
+      "executavel": false,
+      "motivos": [
+        "job deploy usa environment de deploy"
+      ]
+    }
+  ],
+  "use-continue-on-error-in-github-actions-matrix-jobs": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/use-continue-on-error-in-github-actions-matrix-jobs/1.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-1.yml"
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/use-continue-on-error-in-github-actions-matrix-jobs/2.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-2.yml"
+    },
+    {
+      "bloco": 3,
+      "arquivo": "examples/use-continue-on-error-in-github-actions-matrix-jobs/3.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-3.yml"
+    },
+    {
+      "bloco": 4,
+      "arquivo": "examples/use-continue-on-error-in-github-actions-matrix-jobs/4.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-4.yml"
+    },
+    {
+      "bloco": 5,
+      "arquivo": "examples/use-continue-on-error-in-github-actions-matrix-jobs/5.yml",
+      "executavel": true,
+      "motivos": [],
+      "workflow": ".github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-5.yml"
     }
   ]
 }

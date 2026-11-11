@@ -1,0 +1,24 @@
+name: 'use-continue-on-error-in-github-actions-matrix-jobs #1'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-use-continue-on-error-in-github-actions-matrix-jobs-1.yml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: true
+      matrix:
+        version:
+        - 6
+        - 7
+        - 8
+        experimental:
+        - false
+        include:
+        - version: 9
+          experimental: true
+    steps:
+    - run: echo "Testing version ${{ matrix.version }}"

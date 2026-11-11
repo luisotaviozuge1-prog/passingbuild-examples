@@ -1,0 +1,9 @@
+name: Step-level continue-on-error
+'on': push
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: exit 1
+      continue-on-error: true
+    - run: echo "Runs because the previous step was allowed to fail"

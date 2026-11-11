@@ -1,0 +1,15 @@
+name: 'fix-xcode-exit-code-65-in-github-actions-ios-builds #5'
+'on':
+  workflow_dispatch: {}
+  push:
+    paths:
+    - .github/workflows/ex-fix-xcode-exit-code-65-in-github-actions-ios-builds-5.yml
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clean up keychain and profile
+      if: always()
+      run: |
+        security delete-keychain "$RUNNER_TEMP/app-signing.keychain-db" || true
+        rm -f ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision

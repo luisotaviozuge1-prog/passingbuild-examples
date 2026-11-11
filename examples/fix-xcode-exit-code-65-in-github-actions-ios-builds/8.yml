@@ -1,0 +1,22 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run tests by simulator UDID
+      run: |
+        set -o pipefail
+        DEVICE_ID=$(xcrun simctl list devices available -j | jq -r '
+          [.devices[][] | select(.name == "iPhone 15")] | first | .udid // empty
+        ')
+
+        if [ -z "$DEVICE_ID" ]; then
+          echo "No available iPhone 15 simulator found"
+          exit 1
+        fi
+
+        xcodebuild test \
+          -project MyApp.xcodeproj \
+          -scheme MyApp \
+          -destination "platform=iOS Simulator,id=$DEVICE_ID"

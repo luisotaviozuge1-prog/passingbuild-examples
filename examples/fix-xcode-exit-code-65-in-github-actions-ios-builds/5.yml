@@ -1,0 +1,11 @@
+name: example
+'on': push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clean up keychain and profile
+      if: always()
+      run: |
+        security delete-keychain "$RUNNER_TEMP/app-signing.keychain-db" || true
+        rm -f ~/Library/MobileDevice/Provisioning\ Profiles/build_pp.mobileprovision
