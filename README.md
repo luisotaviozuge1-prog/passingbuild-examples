@@ -24,4 +24,5 @@ Every GitHub Actions example published on [Passing Build](https://passingbuild.c
 | [reusable-workflows-vs-composite-actions-in-github-actions](https://passingbuild.com/blog/reusable-workflows-vs-composite-actions-in-github-actions/) | 6 | 0 | 0 |
 | [run-github-actions-jobs-only-when-specific-files-change](https://passingbuild.com/blog/run-github-actions-jobs-only-when-specific-files-change/) | 3 | 0 | 0 |
 | [share-files-and-state-between-github-actions-jobs](https://passingbuild.com/blog/share-files-and-state-between-github-actions-jobs/) | 5 | 4 | 0 |
+| [upload-build-binaries-to-a-github-release-from-github-actions](https://passingbuild.com/blog/upload-build-binaries-to-a-github-release-from-github-actions/) | 2 | 0 | 0 |
 | [use-continue-on-error-in-github-actions-matrix-jobs](https://passingbuild.com/blog/use-continue-on-error-in-github-actions-matrix-jobs/) | 5 | 5 | 0 |

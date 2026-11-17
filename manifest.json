@@ -559,6 +559,25 @@
       ]
     }
   ],
+  "upload-build-binaries-to-a-github-release-from-github-actions": [
+    {
+      "bloco": 1,
+      "arquivo": "examples/upload-build-binaries-to-a-github-release-from-github-actions/1.yml",
+      "executavel": false,
+      "motivos": [
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)",
+        "usa ação de terceiros (softprops/action-gh-release)"
+      ]
+    },
+    {
+      "bloco": 2,
+      "arquivo": "examples/upload-build-binaries-to-a-github-release-from-github-actions/2.yml",
+      "executavel": false,
+      "motivos": [
+        "pede permissão de escrita (rodar sozinho mexeria no repositório)"
+      ]
+    }
+  ],
   "use-continue-on-error-in-github-actions-matrix-jobs": [
     {
       "bloco": 1,

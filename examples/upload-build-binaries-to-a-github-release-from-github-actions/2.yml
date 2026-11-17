@@ -1,0 +1,51 @@
+name: Release
+'on':
+  push:
+    tags:
+    - v*
+permissions:
+  contents: write
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_REPO: ${{ github.repository }}
+  TAG: ${{ github.ref_name }}
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create release
+      run: gh release create "$TAG" --title "$TAG" --generate-notes
+  build:
+    needs: create-release
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - os: ubuntu-latest
+          asset: myapp-linux-amd64
+        - os: macos-latest
+          asset: myapp-darwin-arm64
+        - os: windows-latest
+          asset: myapp-windows-amd64.exe
+    steps:
+    - uses: actions/checkout@v7
+    - name: Build
+      shell: bash
+      run: |
+        # Replace with your real build command
+        mkdir -p dist
+        echo "binary for ${{ matrix.os }}" > "dist/${{ matrix.asset }}"
+    - name: Generate checksum
+      shell: bash
+      working-directory: dist
+      run: |
+        shasum -a 256 "${{ matrix.asset }}" > "${{ matrix.asset }}.sha256"
+        cat "${{ matrix.asset }}.sha256"
+    - name: Upload assets
+      shell: bash
+      run: |
+        gh release upload "$TAG" \
+          "dist/${{ matrix.asset }}" \
+          "dist/${{ matrix.asset }}.sha256" \
+          --clobber

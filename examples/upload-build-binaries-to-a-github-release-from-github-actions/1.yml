@@ -1,0 +1,21 @@
+name: Release
+'on':
+  push:
+    tags:
+    - v*
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - name: Build
+      run: |
+        # Replace with your real build command
+        mkdir -p dist
+        echo "binary" > dist/myapp-linux-amd64
+    - name: Publish release
+      uses: softprops/action-gh-release@v3
+      with:
+        files: dist/*
